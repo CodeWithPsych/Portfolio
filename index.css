@@ -1,0 +1,369 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&family=Pixelify+Sans:wght@600&family=Poppins:ital,wght@0,100;0,400;1,100;1,400&family=Ubuntu:ital,wght@1,300&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  color: aliceblue;
+  background-color: rgb(1, 1, 45);
+  font-family: "Poppins", sans-serif;
+}
+#logo img {
+  padding: 12px;
+  width: 88px;
+  height: 87px;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  height: 90px;
+  background-color: rgb(4 0 78);
+}
+nav ul li {
+  padding: 12px;
+  list-style: none;
+  margin: 0 23px;
+  cursor: pointer;
+}
+nav ul li:hover {
+  padding: 12px;
+  font-weight: 1000;
+  cursor: pointer;
+  border: 2px solid white;
+  background-color: white;
+  color: black;
+  border-radius: 12px;
+}
+.navright a {
+  text-decoration: none;
+  color: white;
+  list-style: none;
+  cursor: pointer;
+}
+.navright a:hover {
+  padding: 12px;
+  font-weight: 1000;
+  cursor: pointer;
+  border: 2px solid white;
+  background-color: white;
+  color: black;
+  border-radius: 12px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+}
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: row;
+  font-size: 1.8rem;
+  font-family: "PT Serif", serif;
+}
+
+/* underline  */
+.about #h::after {
+  content: "";
+  position: absolute;
+  left: 3px;
+  bottom: -4px;
+  width: 17%;
+  height: 4px;
+  background-color: wheat;
+  transform-origin: center;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  z-index: 1;
+}
+
+/* Modify the hover effect */
+.about #h:hover::after {
+  transform: scaleX(1);
+}
+
+/* Remove the transform from h1 elements */
+.about #h {
+  position: relative;
+  cursor: pointer;
+}
+
+/* main sections  */
+.firstsection {
+  position: sticky;
+  display: flex;
+  justify-content: space-around;
+  margin: 35px 0px;
+}
+.firstsectionleft {
+  display: flex;
+  flex-direction: column;
+  font-size: 35px;
+  margin: 22px 0px;
+}
+
+/* image box shadow  */
+.firstsectionright img {
+  opacity: 0.8;
+  animation: shadowAnimation 3s infinite alternate;
+}
+@keyframes shadowAnimation {
+  0% {
+    box-shadow: 0px 0 wheat inset, 1em 1.4em #1e0080;
+  }
+  100% {
+    box-shadow: -398px 0 wheat inset, 1em 1.4em #1e0080;
+  }
+}
+
+.name {
+  color: rgb(35 23 255);
+}
+#element {
+  color: rgb(35 23 255);
+}
+
+/* code img  */
+#code {
+  position: absolute;
+  display: flex;
+  margin: 144px 12px;
+  width: 400px;
+  height: 350px;
+  opacity: 1;
+}
+.firstsectionright {
+  display: flex;
+  flex-direction: column;
+}
+
+/* accounts links  */
+.links {
+  display: flex;
+  margin: -60px 221px;
+}
+.github {
+  font-size: 70px;
+  background-color: transparent;
+  color: white;
+  border: none;
+}
+.insta {
+  font-size: 70px;
+  background-color: transparent;
+  border: none;
+}
+.fb {
+  font-size: 70px;
+  background-color: transparent;
+  border: none;
+}
+.twitter {
+  font-size: 70px;
+  background-color: transparent;
+  border: none;
+}
+
+/* cv  */
+.resume {
+  display: flex;
+  flex-direction: row-reverse;
+}
+#viewResumeButton {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  display: flex;
+  flex-direction: row-reverse;
+  text-decoration: none;
+  color: wheat;
+  font-size: 50px;
+  margin-top: 40px;
+  margin-right: 175px;
+  cursor: pointer;
+}
+hr {
+  width: 90%;
+  height: 12px;
+  background-color: white;
+  border-radius: 7px;
+}
+
+/* About portion */
+.education {
+  font-size: 30px;
+  margin: 0px 57px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(3, auto);
+  grid-gap: 84px;
+}
+.about h1 {
+  margin-left: 15px;
+  padding: 12px;
+  font-size: 50px;
+}
+.matric {
+  border: 2px solid white;
+  color: black;
+  background-color: white;
+  padding: 20px;
+  border-radius: 15px;
+}
+.inter {
+  padding: 20px;
+  border-radius: 15px;
+  border: 2px solid white;
+  color: black;
+  background-color: white;
+}
+.bachelors {
+  border: 2px solid white;
+  color: black;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: white;
+}
+.matric:hover {
+  transform: perspective(900px) translateY(-5%) rotatey(20deg) translateZ(0);
+  box-shadow: rgba(255, 0, 0, 0.31) 20px 20px 20px 20px;
+  filter: brightness(1);
+  transform: translate3d(0%, -25px, 50px);
+}
+.inter:hover {
+  transform: perspective(900px) translateY(-5%) rotatey(20deg) translateZ(0);
+  box-shadow: rgba(255, 0, 0, 0.31) 20px 20px 20px 20px;
+  filter: brightness(1);
+  transform: translate3d(0%, -25px, 50px);
+}
+.bachelors:hover {
+  transform: perspective(900px) translateY(-5%) rotatey(20deg) translateZ(0);
+  box-shadow: rgba(255, 0, 0, 0.31) 20px 20px 20px 20px;
+  filter: brightness(1);
+  transform: translate3d(0%, -25px, 50px);
+}
+h3 {
+  color: rgba(255, 0, 0);
+}
+
+/* hr  */
+.about hr {
+  border-radius: 7px;
+  margin-top: -32px;
+  width: 340%;
+  height: 12px;
+  background-color: white;
+}
+/* services  */
+.services {
+  padding: 15px;
+  margin-left: 30px;
+  font-size: 25px;
+  margin-top: -137px;
+}
+.services p {
+  margin-top: -28px;
+  margin-left: 89px;
+}
+.services h3 {
+  color: rgba(255, 0, 0);
+  padding: 15px;
+  margin-left: 30px;
+  font-size: 25px;
+}
+.services button {
+  font-size: 30px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.services hr {
+  border-radius: 7px;
+  margin-top: 0px;
+  width: 90%;
+  height: 12px;
+  background-color: white;
+}
+
+/* contact us  */
+.contact a {
+  text-decoration: none;
+  color: white;
+  margin-left: 12px;
+  padding: 90px;
+  font-size: 30px;
+}
+.contact div {
+  padding: 25px 0px;
+  margin-top: -40px;
+}
+h1 {
+  cursor: pointer;
+}
+
+
+/* responsive  */
+/* @media (min-width: 275px) and (max-width: 449px) {
+  body {
+    font-size: 14px;
+  }
+  nav ul li {
+    font-size: 8px;
+    padding: 4px;
+    margin: 0px;
+  }
+  .head div {
+    font-size: 9px;
+  }
+  #logo img {
+    display: none;
+  }
+  .firstsectionright img {
+    width: 105px;
+    height: 130px;
+    margin: 20px 12px;
+  }
+
+  .firstsectionleft {
+    font-size: 16px;
+  }
+  .education {
+    grid-template-columns: repeat(1, 1fr);
+    font-size: 14px;
+  }
+  #viewResumeButton {
+    font-size: 14px;
+  }
+  #code img {
+    margin: 50px -13px;
+    width: 120px;
+    height: 50px;
+  }
+  .links button a {
+    font-size: 12px;
+  }
+  .head {
+    font-size: 16px;
+  }
+  .links {
+    font-size: 0.8rem;
+    margin: 0.8rem 1.2rem;
+  }
+  nav {
+    margin: 0px;
+  }
+  h1 {
+    font-size: 22px;
+  }
+}
+@media (min-width: 450px) and (max-width: 1012px) {
+  .education {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1013px) {
+  .education {
+    grid-template-columns: repeat(3, 1fr);
+  }
+} */

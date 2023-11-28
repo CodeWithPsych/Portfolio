@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects</title>
+    <script src="https://unpkg.com/scroll-into-view-if-needed@2.0.0/dist/index.min.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script
+      src="https://kit.fontawesome.com/fdae18ca78.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- css  -->
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        color: aliceblue;
+        background-color: rgb(1, 1, 45);
+        font-family: "Poppins", sans-serif;
+      }
+      #logo img {
+        padding: 12px;
+        width: 88px;
+        height: 87px;
+      }
+      nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
+        height: 90px;
+        background-color: rgb(4 0 78);
+      }
+      nav ul li {
+        list-style: none;
+      }
+      .head {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: row;
+        font-size: 1.8rem;
+        font-family: "PT Serif", serif;
+      }
+
+      nav ul {
+        display: flex;
+        justify-content: center;
+      }
+      #home_page {
+        text-decoration: none !important;
+        border: none !important;
+        outline: none !important;
+        background-color: transparent !important;
+        color: white;
+        font-size: 17px;
+      }
+      #home_page:hover {
+        font-weight: 1000;
+        cursor: pointer;
+        border: 2px solid white !important;
+        background-color: white !important;
+        border-radius: 8px;
+        color: black;
+      }
+
+      /* img  */
+      .main_content {
+        display: grid;
+        grid-template-columns: repeat(5, auto);
+        grid-template-rows: repeat(5, auto);
+        gap: 1.8rem;
+        width: 78%;
+      }
+      .main_content img {
+        width: 175px;
+        height: 175px;
+        border: 2px solid transparent;
+        border-radius: 12px;
+        cursor: pointer;
+      }
+      /* span  */
+      .spans {
+        display: grid;
+        grid-template-columns: repeat(5, auto);
+        grid-template-rows: repeat(5, auto);
+        margin: -87px 50px;
+        font-size: 34px;
+        gap: 3.8000000000000007rem;
+        width: 78%;
+        cursor: pointer;
+      }
+    </style>
+
+    <!-- html  -->
+  </head>
+  <body>
+    <nav>
+      <div class="head">
+        <div id="logo">
+          <img src="images/logo.png" />
+        </div>
+        <div>Code With Psych</div>
+      </div>
+
+      <div class="navright">
+        <ul>
+          <li id="home">
+            <i class="fa-solid fa-arrow-left" style="color: #ffffff"></i>
+            <button id="home_page">Home Page</button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <h1>Projects</h1>
+    <div class="main_content">
+      <!-- ... (your project images) ... -->
+      <img
+        src="images/spotify_video.png"
+        id="spotify"
+        class="project-img"
+        data-video="videos/spotify.mp4"
+      />
+      <img
+        src="images/calculator video.png"
+        id="calculator"
+        class="project-img"
+        data-video="videos/calculator.mp4"
+      />
+      <img
+        src="images/weather_video.webp"
+        id="weather"
+        class="project-img"
+        data-video="videos/weather.mp4"
+      />
+      <img
+        src="images/percentage_video.png"
+        id="percentage"
+        class="project-img"
+        data-video="videos/percentage.mp4"
+      />
+    </div>
+    <div class="spans">
+      <span>Spotify</span>
+      <span>Calculator</span>
+      <span>Weather</span>
+      <span>% Calculator</span>
+    </div>
+<h1>Video</h1>
+    <div id="video-container">
+      <video id="video-player" controls autoplay>
+        <source src="" type="video/mp4">
+      </video>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+      document
+        .getElementById("home_page")
+        .addEventListener("click", function () {
+          window.location.href = "index.html";
+        });
+
+      const videoItems = document.querySelectorAll(".project-img");
+      const videoPlayer = document.getElementById("video-player");
+
+      function playVideo(filename) {
+        videoPlayer.src = filename; // Set the video source
+        videoPlayer.load(); // Load the new video source
+        videoPlayer.play(); // Play the video
+        setVideoSize(800, 600); // Adjust the size
+      }
+
+      videoItems.forEach((videoItem) => {
+        videoItem.addEventListener("click", () => {
+          const videoFilename = videoItem.getAttribute("data-video");
+          playVideo(videoFilename);
+        });
+      });
+
+      function setVideoSize(width, height) {
+        videoPlayer.style.width = width + "px";
+        videoPlayer.style.height = height + "px";
+      }
+    </script>
+  </body>
+</html>
